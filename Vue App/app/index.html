@@ -24,25 +24,29 @@
   </div>
   <script>
 
-      var array = ['Mahbod', 'Moe', 'Moey', 'JoeI','Bloey'];
+      var array = ['Mahbod', 'Moe', 'Moey', 'JoeI','Bloey','Howwy','Oey','EEEEEEE','Blo'];
       var oddEven = true;
       var vm = new Vue({
           el: '#app',
           data: {
               title: 'Appointment',
               arrayVar: array,
-              odd: 'n%2 !== 0',
-              even: 'n%2 === 0',
               evenOdd: oddEven
           }
+          methods: {
+            remove: function(){
+              return (_.without(arrayVar, arrayVar[-1]))
+            }
+          }
       })
+
   </script>
   <style scope>
 
       .fade-enter-active, .fade-leave-active {
           transition: opacity .5s;
       }
-      .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+      .fade-enter, .fade-leave-to {
           opacity: 0;
       }
 
