@@ -11,7 +11,7 @@
       <button v-on:click="evenOdd = !evenOdd">{{title}}</button>
       <transition-group name="fade" duration="200">
       <ul v-bind:key="n" v-for="n in arrayVar.length" v-if="evenOdd">
-          <li v-bind:key="n" v-if="n%2 !== 0">{{arrayVar[n-1]}}</li>
+          <li v-bind:key="n" v-if="n%2 !== 0"><button @click="numberIncrease">{{arrayVar[n-1]}} {{value}}</button></li>
       </ul>
       </transition-group>
       <transition-group name="fade" duration="500">
@@ -19,8 +19,6 @@
               <li v-bind:key="n" v-if="n%2 === 0">{{arrayVar[n-1]}}</li>
           </ul>
       </transition-group>
-
-
   </div>
   <script>
 
@@ -33,9 +31,29 @@
               arrayVar: array,
               odd: 'n%2 !== 0',
               even: 'n%2 === 0',
-              evenOdd: oddEven
-          }
+              evenOdd: oddEven,
+              value: 0,
+              number: 0,
+              interval: false
+          },
+          methods:{
+              numberIncrease: function(){
+                  this.number+=10;
+                  clearInterval(this.interval);
+                  if(this.number === this.value){
+                      return;
+                  }
+
+                  this.interval = window.setInterval(function(){
+                      if(this.value !== this.number){
+                          this.value+=1;
+                      }
+                  }.bind(this), 30);
+              }
+          },
       })
+
+
   </script>
   <style scope>
 
