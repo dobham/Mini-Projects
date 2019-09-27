@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8">
+    <title>Building with Vue.js</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <script src="https://unpkg.com/vue"></script>
+  </head>
+  <body>
+  <div id="app">
+      <button v-on:click="evenOdd = !evenOdd">{{title}}</button>
+      <transition-group name="fade" duration="200">
+      <ul v-bind:key="n" v-for="n in arrayVar.length" v-if="evenOdd">
+          <li v-bind:key="n" v-if="n%2 !== 0"><button @click="numberIncrease">{{arrayVar[n-1]}} {{value}}</button></li>
+      </ul>
+      </transition-group>
+      <transition-group name="fade" duration="500">
+          <ul v-bind:key="n" v-for="n in arrayVar.length" v-if="!evenOdd">
+              <li v-bind:key="n" v-if="n%2 === 0">{{arrayVar[n-1]}}</li>
+          </ul>
+      </transition-group>
+  </div>
+  <script>
+
+      var array = ['Mahbod', 'Moe', 'Moey', 'JoeI','Bloey'];
+      var oddEven = true;
+      var vm = new Vue({
+          el: '#app',
+          data: {
+              title: 'Appointment',
+              arrayVar: array,
+              odd: 'n%2 !== 0',
+              even: 'n%2 === 0',
+              evenOdd: oddEven,
+              value: 0,
+              number: 0,
+              interval: false
+          },
+          methods:{
+              numberIncrease: function(){
+                  this.number+=10;
+                  clearInterval(this.interval);
+                  if(this.number === this.value){
+                      return;
+                  }
+
+                  this.interval = window.setInterval(function(){
+                      if(this.value !== this.number){
+                          this.value+=1;
+                      }
+                  }.bind(this), 30);
+              }
+          },
+      })
+
+
+  </script>
+  <style scope>
+
+      .fade-enter-active, .fade-leave-active {
+          transition: opacity .5s;
+      }
+      .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+          opacity: 0;
+      }
+
+  </style>
+  </body>
+</html>
