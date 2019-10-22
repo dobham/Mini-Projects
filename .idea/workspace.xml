@@ -2,17 +2,58 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28acbe2a-d9b7-48b2-997f-81e4983549be" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Vue App 2/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Vue App 2/.idea/Vue App 2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Vue App 2/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Vue App 2/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Vue App 2/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Processing Projects Repo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Processing Projects Repo.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vue App/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Vue App/app/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vue App/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Vue App/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vue App/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Vue App/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Processing3 Projects/Bubble Spawn 2/bubble_spawn_2/bubble_spawn_2.pde" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Processing3 Projects/Bubbles Spawn/Discord_lnk/Discord_lnk.pde" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Processing3 Projects/Button_Testing/Button_Testing.pde" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Processing3 Projects/Loop_Row_Testing/Loop_Row_Testing.pde" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Processing3 Projects/Loop_Testing/Loop_Testing.pde" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Processing3 Projects/Manhattan Pathfinder/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Processing3 Projects/Manhattan Pathfinder/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Processing3 Projects/Manhattan Pathfinder/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Processing3 Projects/Manhattan Pathfinder/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Processing3 Projects/Manhattan Pathfinder/Manhattan Pathfinder.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Processing3 Projects/Manhattan Pathfinder/src/Pathfinder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Processing3 Projects/Maze_Testing/Maze_Testing.pde" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Processing3 Projects/Object_Loop_Testing/Object_Loop_Testing.pde" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Processing3 Projects/Save_Test/Save_Test.pde" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Processing3 Projects/Save_Test/saveTest.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Processing3 Projects/Scroll_Testing/Scroll_Testing.pde" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue App 2/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue App 2/.idea/Vue App 2.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue App 2/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue App 2/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue App 2/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue App 2/client/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue App 2/client/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue App 2/client/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue App 2/client/babel.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue App 2/client/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue App 2/client/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue App 2/client/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue App 2/client/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue App 2/client/src/App.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue App 2/client/src/assets/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue App 2/client/src/components/HelloWorld.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue App 2/client/src/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue App/.babelrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue App/.eslintrc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue App/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue App/.idea/Vue Project.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue App/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue App/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue App/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue App/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue App/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue App/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue App/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue App/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue App/app/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue App/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue App/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue App/process/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue App/webpack.config.js" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -61,6 +102,7 @@
       <workItem from="1568781343773" duration="119000" />
       <workItem from="1569556365949" duration="4916000" />
       <workItem from="1570298005417" duration="4327000" />
+      <workItem from="1571709854592" duration="473000" />
     </task>
     <servers />
   </component>
@@ -72,7 +114,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
