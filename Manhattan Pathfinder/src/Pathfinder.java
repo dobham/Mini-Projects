@@ -3,7 +3,8 @@ import processing.core.PApplet;
 import java.io.*;
 
 public class PathFinder extends PApplet {
-    private static int[][] points = new int[3][2];
+    private static int[][] objectives;
+    private static int[][] mapNodes;
 
     public static void main(String[] args) {
         PApplet.main("PathFinder", args);
@@ -12,9 +13,9 @@ public class PathFinder extends PApplet {
     public void settings() { }
 
     public void setup() {
-        Mapper map = new Mapper();
         try {
-            map.createMap(points);
+            objectives = Mapper.mapObjectives();
+            mapNodes = Mapper.createNodes();
         } catch (IOException e) {
             e.printStackTrace();
         }
