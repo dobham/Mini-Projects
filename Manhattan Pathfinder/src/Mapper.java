@@ -29,7 +29,7 @@ class Mapper {
             if((char) i == 'R'){
                 points[2][0] = x;
                 points[2][1] = y;
-                System.out.format("R (%d, %d)" ,x, y);
+//                System.out.format("R (%d, %d)" ,x, y);
             }
             y++;
             if((char) i == '\n'){
@@ -58,7 +58,7 @@ class Mapper {
                 x++;
             }
         }
-        System.out.format("%d",j);
+//        System.out.format("%d",j);
         return points;
     }
 }

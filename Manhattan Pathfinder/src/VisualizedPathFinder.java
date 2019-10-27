@@ -2,15 +2,19 @@ import org.jetbrains.annotations.*;
 import processing.core.PApplet;
 import java.io.*;
 
-public class PathFinder extends PApplet {
+public class VisualizedPathFinder extends PApplet {
     private static int[][] objectives;
     private static int[][] mapNodes;
+    private static final int GAP = 10;
+    private static final int SIZE = 15;
 
     public static void main(String[] args) {
         PApplet.main("PathFinder", args);
     }
 
-    public void settings() { }
+    public void settings() {
+        fullScreen();
+    }
 
     public void setup() {
         try {
@@ -21,7 +25,10 @@ public class PathFinder extends PApplet {
         }
     }
 
-    public void draw() { }
+
+    public void draw() {
+
+    }
 }
 
     /* THE C CODE
