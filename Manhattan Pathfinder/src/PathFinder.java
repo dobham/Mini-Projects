@@ -1,3 +1,4 @@
+import org.jetbrains.annotations.NotNull;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
@@ -24,9 +25,10 @@ public class PathFinder {
         return shortestPath;
     }
 
+    @NotNull
     static int[][] shortestPathArray(){
         int[][] shortestPathArray = new int[setShortestPath()][2];
-        int[] xArr = new int[setShortestPath()], yArr = new int[setShortestPath()];
+        int[] xArr = new int[setShortestPath()], xArrBuff = new int[setShortestPath()], yArr = new int[setShortestPath()], yArrBuff = new int[setShortestPath()];
         if (((objectives[1][0] == objectives[0][0] && objectives[1][0] == objectives[2][0] && objectives[2][0] == objectives[0][0]) || (objectives[1][1] == objectives[0][1] && objectives[1][1] == objectives[2][1] && objectives[2][1] == objectives[0][1]))) {
             if (((objectives[2][0] > objectives[0][0] && objectives[2][0] < objectives[1][0]) || (objectives[2][0] > objectives[1][0] && objectives[2][0] < objectives[0][0])) || ((objectives[2][1] > objectives[0][1] && objectives[2][1] < objectives[1][1]) || (objectives[2][1] > objectives[1][1] && objectives[2][1] < objectives[0][1]))) {
                 //Rock is inbetween
@@ -40,11 +42,40 @@ public class PathFinder {
                         yArr[i] = y;
                     }
                 }
-                if ((Math.abs(objectives[0][1] - objectives[1][1]) == 0)){
+                else if ((Math.abs(objectives[0][1] - objectives[1][1]) == 0)){
                     int y = objectives[0][1];
                     for (int x = objectives[0][0], i = 0; y < Math.abs(objectives[0][0] - objectives[1][0])-1; y++, i++) {
                         xArr[i] = x;
                         yArr[i] = y;
+                    }
+                }
+                else{
+                    if ((Math.abs(objectives[0][0] - objectives[2][0]) == 0 && objectives[2][1] > objectives[0][1])){
+                        int x = objectives[0][0];
+                        for (int y = 0, i=0; y <= Math.abs(objectives[0][1] - objectives[2][1])-1; y++, i++) {
+                            xArrBuff[i] = x;
+                            yArrBuff[i] = y;
+                        }
+                        x++;
+                        for (int i = 0; x <= Math.abs(objectives[0][0] - objectives[1][0]); x++, i++) {
+                            xArr[i] = x;
+                        }
+                        for (int y = objectives[0][1]+1 , i = 0; y <= Math.abs(objectives[0][1] - objectives[1][1])-1; y++, i++) {
+                            yArr[i] = y;
+                        }
+                    }
+                    else if ((Math.abs(objectives[0][0] - objectives[2][0]) == 0 && objectives[2][1] < objectives[0][1])){
+                        int y = objectives[0][0];
+                        for (int x = 0, i=0; x <= Math.abs(objectives[0][1] - objectives[2][1])-1; x++, i++) {
+                            xArrBuff[i] = x;
+                            yArrBuff[i] = y;
+                        }
+                    }
+                    else if ((Math.abs(objectives[0][1] - objectives[2][0]) == 0 && objectives[2][1] > objectives[1][1])){
+
+                    }
+                    else if ((Math.abs(objectives[0][1] - objectives[2][0]) == 0 && objectives[2][1] < objectives[1][1])){
+
                     }
                 }
             }
@@ -68,27 +99,3 @@ public class PathFinder {
         return shortestPathArray;
     }
 }
-
-
-/* THE C CODE
-    int main(){
-    FILE *input;
-    FILE *output;
-    input = fopen("..\\input.in","r");
-    int objectives[3][2];
-    int path;
-    for (int x = 0; x < 11; x++) {
-        for (int y = 0; y <= 11; y++) {
-            int value = fgetc(input);
-            ((value == 'B') ? objectives[0][0] = x, objectives[0][1] = y : 0);
-            ((value == 'L') ? objectives[1][0] = x, objectives[1][1] = y : 0);
-            ((value == 'R') ? objectives[2][0] = x, objectives[2][1] = y : 0);
-        }
-    }
-    fclose(input);
-    (((objectives[1][0] == objectives[0][0] && objectives[1][0] == objectives[2][0] && objectives[2][0] == objectives[0][0]) || (objectives[1][1] == objectives[0][1] && objectives[1][1] == objectives[2][1] && objectives[2][1] == objectives[0][1])) ? (((objectives[2][0] > objectives[0][0] && objectives[2][0] < objectives[1][0]) || (objectives[2][0] > objectives[1][0] && objectives[2][0] < objectives[0][0])) || ((objectives[2][1] > objectives[0][1] && objectives[2][1] < objectives[1][1]) || (objectives[2][1] > objectives[1][1] && objectives[2][1] < objectives[0][1])) ? (path=(fabs(objectives[0][0]-objectives[1][0]))+(fabs(objectives[0][1]-objectives[1][1]))+1) : (path=(fabs(objectives[0][0]-objectives[1][0]))+(fabs(objectives[0][1]-objectives[1][1]))-1)) : (path=(fabs(objectives[0][0]-objectives[1][0]))+(fabs(objectives[0][1]-objectives[1][1]))-1));
-    output = fopen("..\\output.out", "w");
-    fprintf(output, "%d", path);
-    fclose(output);
-    return 0;
-}*/

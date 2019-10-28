@@ -1,5 +1,5 @@
 /* TODO Phase 1
-    -Complete min distance algorithm
+    -Complete min distance algorithm (Done)
     -Create visualized 10x10 board
     -Display Objective Points
     -Create min pathway nodes
@@ -7,5 +7,17 @@
 */
 
 /* TODO Phase 2
-    To be determined
+    Create Best First Search (Optional)
+    Create A* Search
+    Visualize them on basic map
+*/
+
+/* TODO Phase 3
+    Make maze (Multiple Obstacles)
+    Create visualization for A*
+*/
+
+/* TODO Phase 4
+    Create Topological Sorting
+    Visualize it
 */
