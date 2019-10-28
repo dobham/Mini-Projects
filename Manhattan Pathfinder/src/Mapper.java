@@ -2,33 +2,38 @@ import java.io.*;
 import org.jetbrains.annotations.*;
 class Mapper {
     private static int i,j, x, y;
+    private static int[][] objectivePoints = new int[3][2];
+    private static int[][] mapNodes = new int[97][2];
+    private static FileReader fr;
 
-    public Mapper(){
+    public Mapper() {
         x = 0;
         y = 0;
         j = 0;
     }
 
+    private static void chooseFile() throws FileNotFoundException {
+        fr = new FileReader("src\\input.in");
+    }
+
+
     @NotNull
-    @Contract("_ -> param1")
     static int[][] mapObjectives() throws IOException {
-        final String filename = "input.in";
-        int[][] points = new int[3][2];
-        FileReader fr = new FileReader("src\\input.in");
+        chooseFile();
         while ((i = fr.read()) != -1){
             if((char) i == 'B'){
-                points[0][0] = x;
-                points[0][1] = y;
-//                System.out.format("B (%d, %d)" ,x, y);
+                objectivePoints[0][0] = x;
+                objectivePoints[0][1] = y;
+                System.out.format("B (%d, %d)" ,x, y);
             }
             if((char) i == 'L'){
-                points[1][0] = x;
-                points[1][1] = y;
+                objectivePoints[1][0] = x;
+                objectivePoints[1][1] = y;
 //                System.out.format("L (%d, %d)" ,x, y);
             }
             if((char) i == 'R'){
-                points[2][0] = x;
-                points[2][1] = y;
+                objectivePoints[2][0] = x;
+                objectivePoints[2][1] = y;
 //                System.out.format("R (%d, %d)" ,x, y);
             }
             y++;
@@ -37,18 +42,16 @@ class Mapper {
                 x++;
             }
         }
-        return points;
+        return objectivePoints;
     }
 
     @NotNull
     static int[][] createNodes() throws IOException {
-        final String filename = "input.in";
-        int[][] points = new int[97][2];
-        FileReader fr = new FileReader("src\\input.in");
+        chooseFile();
         while ((i = fr.read()) != -1){
             if((char) i == '.'){
-                points[j][0] = x;
-                points[j][1] = y;
+                mapNodes[j][0] = x;
+                mapNodes[j][1] = y;
                 j++;
 //                System.out.format("Dot (%d, %d) %d" ,x, y,j);
             }
@@ -59,6 +62,6 @@ class Mapper {
             }
         }
 //        System.out.format("%d",j);
-        return points;
+        return mapNodes;
     }
 }
